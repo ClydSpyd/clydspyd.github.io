@@ -31,9 +31,7 @@ body{
 #title{
   display: inline-flex;
   justify-content: space-around;
-  /* align-items: baseline; */
-  /* padding: 0 13% 0 13%; */
-  /* background-color: rgb(240, 240, 240); */
+ padding:0;
   width: 100%;
   line-height: 75px;
   height:80px;
@@ -495,9 +493,13 @@ footer{
     text-align: center;
     height:150px;
   }
+
+  .mainPic{
+    margin-top:130px;
+  }
   #title{
+    padding
     height:100px;
-    /* border:red 1px solid; */
     display: inline-flex;
     align-items: center;
     flex-direction: column;
@@ -505,20 +507,19 @@ footer{
   }
  
   .aboutTxt{
-   background-color: aqua;
+   /* background-color: aqua; */
    width:50%;
 }
 
   .aboutTxt {
     font-size:.85rem;
   }
-#aboutArrow{
-  display:none;
-}
-  #projects{
+  .projText{
+    font-size:1.6rem;
   }
-  #title{
-      padding-left:10%;
+
+  #aboutArrow{
+    display:none;
   }
   .project{
       min-width:300px;
@@ -530,10 +531,31 @@ footer{
       padding-right:8%;
   }
   .prevImg{
-    width:65%;
+    width:85%;
+    margin-bottom:90px;
   }
-  .quoteP{
-    /* margin-top:50px; */
+  .smaller{
+    font-size: 2rem;;
+  }
+  .seeProjButton,
+  .closeProject{
+    transform: scale(2);
+    margin-bottom:50px;
+  }
+  #deetzCont{
+    height:1200px;
+  }
+  .aboutImg{
+    display: none;
+  }
+  #aboutInner{
+    height:700px;
+  }
+  .hello{
+    text-align: center;;
+  }
+  .aboutTxt{
+    font-size: 1.2rem;
   }
 }
 @media (max-width:800px){
@@ -560,9 +582,6 @@ footer{
     /* background-color: palegreen; */
     width:50%;
  }
- .aboutImg{
-   display: none;
- }
  .aboutTxt{
    width: 100%;
    text-align: center;
@@ -577,7 +596,6 @@ footer{
       margin:20px;
   }
   #title{
-      padding-left: 0;
       justify-content: center;
   }
   #bottomInner{
@@ -601,4 +619,8 @@ footer{
 .hide{
   display: none;
 }
-
+@media (max-width:400px){
+  .aboutTxt{
+    background-color: chartreuse;
+  }
+}
