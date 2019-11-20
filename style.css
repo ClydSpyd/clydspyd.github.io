@@ -505,7 +505,10 @@ footer{
     flex-direction: column;
     justify-content: space-around;
   }
- 
+  .menuItem {
+    font-size: 1.6rem;
+    margin: 5px 20px 5px 10px;
+}
   .aboutTxt{
    /* background-color: aqua; */
    width:50%;
@@ -545,18 +548,41 @@ footer{
   #deetzCont{
     height:1200px;
   }
+  #about {
+    height: 120vh;
+    width: 100vw;
+}
   .aboutImg{
     display: none;
   }
   #aboutInner{
+    transform: translatey(95px);
     height:700px;
+    width:95vw;
   }
   .hello{
     text-align: center;;
   }
   .aboutTxt{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-align: center;
   }
+  .logos{
+    justify-content: center;;
+  }
+  .seeButton {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.1rem;
+    color: aliceblue;
+    margin: 100px auto;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background-color: rgb(134, 10, 223);
+    border-radius: 10px;
+    cursor: pointer;
+}
 }
 @media (max-width:800px){
   .heading{
