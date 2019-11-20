@@ -585,6 +585,12 @@ footer{
 }
 }
 @media (max-width:800px){
+  .landing{
+    height:100px;
+  }
+  .intro{
+    display:none;
+  }
   .heading{
     font-size: 2.2rem;
   }
@@ -595,19 +601,23 @@ footer{
   display:none;
   height:0;
 }
-.landing{
-  height:300px;
-}
   .seeButton{
     display:none;
   }
 .mainPic{
   height:300px;
 }
-  .aboutTxt{
-    /* background-color: palegreen; */
-    width:50%;
- }
+#about{
+  height:700px;
+  margin-bottom:200px;
+}
+#aboutInner{
+  width:80vw;
+}
+.aboutTxt{
+  /* background-color: palegreen; */
+  width:50%;
+}
  .aboutTxt{
    width: 100%;
    text-align: center;
@@ -616,18 +626,35 @@ footer{
    margin: 30px auto;
  }
 
-  .project{
-      min-width:300px;
-      min-height:300px;
-      margin:20px;
-  }
+.project{
+    min-width:300px;
+    min-height:300px;
+    margin:20px;
+}
+.projText{
+  font-size: 1.4rem;;
+}
+.seeProjButton,
+.closeProject{
+  transform: scale(1.1);
+  transform: translateY(-40px);
+  margin: 0;
+}
+.closeProject{
+  
+  margin-top:20px;
+}
+#projectDeetzTop{
+  height:80%;
+
+}
   #title{
       justify-content: center;
   }
   #bottomInner{
       justify-content: center;
   }
-}
+/* }
 .centered {
   padding-left:20px;
   padding-right:20px;
@@ -640,7 +667,7 @@ footer{
   font-size: 1.2rem;
   color: white;
   background-color: rgba(89, 2, 151, 0.71);
-}
+} */
 
 .hide{
   display: none;
