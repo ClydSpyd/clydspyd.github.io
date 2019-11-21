@@ -18,7 +18,7 @@ body{
   /* left:5px; */
 }
 .landing{
-  height:750px;
+  height:900px;
 }
 #topBar{
   /* border-tp:solid 1px rgb(181, 6, 250); */
@@ -149,7 +149,7 @@ color:rgb(193, 12, 248);
 }
 
 #about{
-  height:110vh;
+  height:900px;
   width:100vw;
   text-align: center;
   display: inline-flex;
@@ -291,6 +291,7 @@ color:rgb(193, 12, 248);
 #projects{
   position: relative;
   flex-wrap: wrap;
+  max-width: 1450px;
   min-height:50vh;
   background-color:rgba(240, 240, 240);
   background-size: cover;
@@ -360,7 +361,7 @@ color:rgb(193, 12, 248);
 #bottom{
   margin:280px 0;
   text-align: center;
-  height:300px;
+  height:900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -391,7 +392,7 @@ i{
 }
 #deetzCont{
   position: fixed;
-  margin:5vh 5vw;
+  margin:1vh 5vw;
   top:0;
   left:0;
   z-index: 1;
@@ -407,7 +408,7 @@ i{
   /* display: none; */
   width:100%;
   height:100%;
-  min-height: 700px;
+  min-height: 650px;
 }
 .projectDetailsInner{
   background-color: white;
@@ -438,12 +439,12 @@ i{
   text-decoration: none;
 }
 .prevImg{
-  width:51%;
+  width:45%;
   margin:30px 0 10px 0;
 }
 .gallImg{
-  width:70%;
-  max-width: 800px;;
+  width:65%;
+  max-width: 720px;;
 }
 .space{
   margin-top:35px;
@@ -488,6 +489,9 @@ footer{
   background-color: blueviolet;
 }
 @media (max-width:1100px){
+  .landing{
+    height:1200px;
+  }
   #topBar{
     margin-top:30px;
     text-align: center;
@@ -549,15 +553,15 @@ footer{
     height:1200px;
   }
   #about {
-    height: 120vh;
+    height: 1200px;
     width: 100vw;
 }
   .aboutImg{
     display: none;
   }
   #aboutInner{
-    transform: translatey(95px);
-    height:700px;
+    /* transform: translatey(95px); */
+    height:800px;
     width:95vw;
   }
   .hello{
@@ -674,6 +678,9 @@ footer{
 }
 @media (max-width:400px){
   .aboutTxt{
-    background-color: chartreuse;
+    background-color: rgb(122, 0, 236);
+  }
+  .landing{
+    height:500px;
   }
 }
