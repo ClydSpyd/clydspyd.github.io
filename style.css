@@ -359,7 +359,6 @@ color:rgb(193, 12, 248);
   filter: grayscale(0%);
 }
 #bottom{
-  margin:280px 0;
   text-align: center;
   height:900px;
   display: flex;
