@@ -525,9 +525,10 @@ footer{
     font-size:1.6rem;
   }
 
-  #aboutArrow{
-    display:none;
-  }
+  #aboutArrow {
+    margin-top: 170px;
+    width: 150px;
+}
   .project{
       min-width:300px;
       min-height:300px;
