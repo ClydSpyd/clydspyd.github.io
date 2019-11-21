@@ -98,6 +98,10 @@ color:rgb(193, 12, 248);
   border-radius: 10px;
   cursor: pointer;
 }
+.seeButton:hover{
+  background-color: rgb(83, 27, 136);
+  font-size:.95rem;
+}
 .seeProjButton{
   font-family: sans-serif;
   font-weight: 100;
@@ -115,9 +119,11 @@ color:rgb(193, 12, 248);
   left:43%;
   font-size: .8rem;
 }
-.seeButton:hover{
-  background-color: rgb(83, 27, 136);
+
+p.smaller:hover  {
+  color: rgb(168, 123, 211);
 }
+
 
 .heading{
   text-align: center;
@@ -484,9 +490,37 @@ i{
   color: blueviolet;
 }
 
+.socialLink:hover{
+  color: blueviolet;
+  /* filter: invert(); */
+}
+
+.mail{
+  color: blueviolet;
+  font-family: 'barlow';
+  text-decoration: none;
+}
+.mail:hover{
+  text-decoration: underline;
+}
+
 footer{
-  height:40px;
+  height:130px;
   background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+footer a {
+  color:white;
+}
+.footCopyright, .iconsBy{
+  font-family: 'zilla slab';
+  margin:2px auto;
+  color: white;
+  font-size: 1rem;
 }
 @media (max-width:1100px){
   .landing{
