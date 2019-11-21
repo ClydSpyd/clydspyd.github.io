@@ -267,7 +267,7 @@ $('.menuItem, .scroll').on('click',(e) => {
   e.preventDefault();
   let target = $(e.target).data('name');
   let off;
-  if(target==='about'){off=30} else if (target==='bottom'){off=-240} else {off=-120};
+  if(target==='about'){off=30} else if (target==='bottom'){off=160} else {off=-40};
   console.log(target)
   $('html, body').animate(
     {
