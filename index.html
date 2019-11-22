@@ -237,7 +237,7 @@
   
   
   var content
-  var current 
+  var current = {value:1}
   
   var scrollClick = function (x) {
     let selectedArrow = $(`#${content}`).children().find('.arrow2')[x];
@@ -251,19 +251,19 @@
       $('#deetzCont').fadeIn();
       $('.projectDetailsInner').hide();
 
-      console.log(content)
       $(`#${content}`).show();
       if (event.target.classList[1] === 'gallerySection') {
-        current = 1;
-        scrollInt = setInterval(function () {scrollClick(1)}, 1500);
+        current.value = 1;
+        console.log(content)
+        scrollInt = setInterval(function () {scrollClick(1)}, 5500);
         scrollInt;
       }
     })
 
     $('.closeProject').on('click', () => {
       $('#deetzCont').fadeOut();
-      current = 1;
-      console.log('current: '+ current)
+      current.value = 1;
+      console.log('current.value: '+ current.value)
       console.log('hai')
       clearInterval(scrollInt);
     })
@@ -292,18 +292,18 @@ $('.menuItem, .scroll').on('click',(e) => {
   let galleryTarget = $(event.target).data('name');
   let newSrc
   
-  if (current < 5 && $(event.target).data('dir')=== 'right'){
-    current++
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  } else if  (current === 5 && $(event.target).data('dir')=== 'right'){
-    current =1
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  } else if (current === 1 && $(event.target).data('dir')=== 'left'){
-    current= 5
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  }else if (current <= 5 && $(event.target).data('dir')=== 'left'){
-    current--
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
+  if (current.value < 5 && $(event.target).data('dir')=== 'right'){
+    current.value++
+    newSrc = 'img/'+galleryTarget+current.value+'.jpg'
+  } else if  (current.value === 5 && $(event.target).data('dir')=== 'right'){
+    current.value =1
+    newSrc = 'img/'+galleryTarget+current.value+'.jpg'
+  } else if (current.value === 1 && $(event.target).data('dir')=== 'left'){
+    current.value= 5
+    newSrc = 'img/'+galleryTarget+current.value+'.jpg'
+  }else if (current.value <= 5 && $(event.target).data('dir')=== 'left'){
+    current.value--
+    newSrc = 'img/'+galleryTarget+current.value+'.jpg'
   }
   console.log(galleryTarget)
 $(`#${galleryTarget}`).attr('src',newSrc)
