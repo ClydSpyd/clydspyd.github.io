@@ -1,6 +1,11 @@
 
 
+  .heading{
+    color: chartreuse;;
+  }
+
 body{
+  overflow-x: hidden;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -295,15 +300,23 @@ p.smaller:hover  {
   margin:5px;
 }
 #projects{
+  width: 100vw;;
   position: relative;
-  flex-wrap: wrap;
-  max-width: 1450px;
   min-height:50vh;
   background-color:rgba(240, 240, 240);
   background-size: cover;
+  /* padding:10px; */
+}
+#projectsInnerWrapper{
+  /* flex-direction: row;; */
+  /* border:1px red solid; */
+  flex-wrap: wrap;
+  display: flex;;
   justify-content: center;
   align-items: center;
-  padding:10px;
+  /* min-width: 900px;; */
+  max-width: 1350px;
+  margin:0 auto;
 }
 
 .project{
@@ -311,11 +324,11 @@ p.smaller:hover  {
   position: relative;
   text-align: center;
   color: white;
-  max-width: 220px;
-  height: 220px;
+  max-width: 250px;
+  max-height: 250px;
   border:solid 1px MediumPurple;
   border-radius: 2px;
-  margin: 20px 35px 20px 35px;
+  margin: 20px 15px 20px 15px;
   background-color: MediumPurple;
   overflow: hidden;
 }
@@ -566,14 +579,14 @@ footer a {
     width: 150px;
 }
   .project{
-      min-width:300px;
-      min-height:300px;
+      min-width:350px;
+      min-height:350px;
       margin:20px;
   }
-  #projects{
+  /* #projects{
       padding-left:8%;
       padding-right:8%;
-  }
+  } */
   .prevImg{
     width:85%;
     margin-bottom:90px;
@@ -669,8 +682,8 @@ footer a {
  }
 
 .project{
-    min-width:300px;
-    min-height:300px;
+    min-width:400px;
+    min-height:400px;
     margin:20px;
 }
 .projText{
@@ -722,3 +735,5 @@ footer a {
     height:500px;
   }
 }
+
+

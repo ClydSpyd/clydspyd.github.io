@@ -69,30 +69,33 @@
       </div>
     </section>
     <section id="projects" class='row'>
-      <div class="project ">
-          <a title='Brooklyn Film Festival' ><img class='brooklyn filt'src="img/bknPic.jpg" alt=""></a>
+      <div id="projectsInnerWrapper">
+        <div class="project ">
+            <a title='Brooklyn Film Festival' ><img class='brooklyn filt'src="img/bknPic.jpg" alt=""></a>
+            
+        </div>
           
-      </div>
-        <div class="project ">
-            <a  title="Abbadon's Inferno" ><img class='abbadon filt'src="img/abbadon.png" alt="A"></a>
-            
-        </div>
-        <div class="project ">
-            <a  title='Feed.me' > <img class='feed filt'src='img/feedMeImg.png'alt="Feed.me"></a>
-           
-            
-        </div>
-        <div class="project ">
-            <a title='Quote Generator' ><img class='quote filt'src="img/quoteGen.jpg" alt=""></a>
+          <div class="project ">
+              <a  title='Feed.me' > <img class='feed filt'src='img/feedMeImg.png'alt="Feed.me"></a>
+             
+              
           </div>
-
-         
-        <div class="project">
-            <a title='Top Tracks'><img class='tunes filt'src="img/spotifyImg.png" alt=""></a>
-        </div> 
-       <div class="project">
-            <a title='Lucid Magazine'><img class='lucidMag gallerySection filt'src="img/lucidImg.png" alt=""></a>
-        </div> 
+          <div class="project ">
+              <a  title="Abbadon's Inferno" ><img class='abbadon filt'src="img/abbadon.png" alt="A"></a>
+              
+          </div>
+          <div class="project ">
+              <a title='Quote Generator' ><img class='quote filt'src="img/quoteGen.jpg" alt=""></a>
+            </div>
+  
+           
+          <div class="project">
+              <a title='Top Tracks'><img class='tunes filt'src="img/spotifyImg.png" alt=""></a>
+          </div> 
+         <div class="project">
+              <a title='Lucid Magazine'><img class='lucidMag gallerySection filt'src="img/lucidImg.png" alt=""></a>
+          </div> 
+      
         <div class="project">
             <a title='Lionheart Magazine'><img class='lion gallerySection filt'src="img/lionheartImg.png" alt=""></a>
         </div>
@@ -100,7 +103,7 @@
             <a title='Chalets + Caviar' ><img class='chalets filt'src="img/C+C2.jpg" alt=""></a>
             
         </div>
-        
+        </div>
        <div id="deetzCont">
          <div id="projectDeetzTop">
               <div id = 'brooklyn' class="projectDetailsInner">
@@ -169,21 +172,23 @@
                   </p>
                   <div class="gallery">
                     <div data-name='lucidGall' data-dir ='left' class="arrow"><</div>
+                    <div data-name='lucidGall' data-dir ='left' class="arrow2">></div>
                     <img id='lucidGall' class='gallImg' src="img/lucidGall1.jpg" alt="" srcset="">
                     <div data-name='lucidGall' data-dir ='right' class="arrow">></div>
                     <div data-name='lucidGall' data-dir ='right' class="arrow2">></div>
                   </div>
                   <P class='projText'>Identity and editorial design for brand new science and technology magazine 'Lucid' </p>
-                  <div class="detailsButtons">
-                    <p class='closeProject'>close</p>
+                    <div class="detailsButtons">
+                      <p class='closeProject'>close</p>
+                    </div>
                   </div>
-                </div>
-                <div id = 'lion' class="projectDetailsInner">
+                  <div id = 'lion' class="projectDetailsInner">
                     <p class='space smaller'>
                       LIONHEART MAGAZINE
                     </p>
                     <div class="gallery">
                       <div data-name='lionGall' data-dir ='left' class="arrow"><</div>
+                      <div data-name='lionGall' data-dir ='left' class="arrow2">></div>
                       <img id='lionGall' class='gallImg' src="img/lionGall1.jpg" alt="" srcset="">
                       <div data-name='lionGall' data-dir ='right' class="arrow">></div>
                       <div data-name='lionGall' data-dir ='right' class="arrow2">></div>
@@ -231,90 +236,6 @@
 
 
 <script src="jquery-3.3.1.min.js"></script>
-<script>
-  
-  
-  
-  var content
-  var current 
-  $('.project').on('click', () => {
-    
-    var scrollClick = function () {
-      let rightArrow = $(`#${content}`).children().find('.arrow2')[0]
-      rightArrow.click()
-    }
-    scrollInt = setInterval(scrollClick, 4500)
-      content = event.target.classList[0];
-      
-      $('#deetzCont').fadeIn();
-      $('.projectDetailsInner').hide();
-
-      console.log(content)
-      $(`#${content}`).show();
-      if (event.target.classList[1] === 'gallerySection') {
-        current = 1;
-      scrollInt;
-      }
-    })
-
-    $('.closeProject').on('click', () => {
-      $('#deetzCont').fadeOut();
-      current = 1;
-      console.log('current: '+ current)
-      console.log('hai')
-      clearInterval(scrollInt);
-    })
-
-
-
-//SCROLL TO SECTION
-$('.menuItem, .scroll').on('click',(e) => {
-  e.preventDefault();
-  let target = $(e.target).data('name');
-  let off;
-  if(target==='about'){off=110} else if (target==='bottom'){off=-160} else {off=-70};
-  console.log(target)
-  $('html, body').animate(
-    {
-      scrollTop: $(`#${target}`).offset().top+off,
-    },
-    700,
-    'swing'
-  )
-})
-
-//GALLERY SCROLL ON CLICK
-
- var galleryScroll = function(){
-  let galleryTarget = $(event.target).data('name');
-  let newSrc
-  
-  if (current < 5 && $(event.target).data('dir')=== 'right'){
-    current++
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  } else if  (current === 5 && $(event.target).data('dir')=== 'right'){
-    current =1
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  } else if (current === 1 && $(event.target).data('dir')=== 'left'){
-    current= 5
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  }else if (current <= 5 && $(event.target).data('dir')=== 'left'){
-    current--
-    newSrc = 'img/'+galleryTarget+current+'.jpg'
-  }
-  console.log(galleryTarget)
-$(`#${galleryTarget}`).attr('src',newSrc)
-}
-
-$('.arrow').on('click', function () {
-  galleryScroll();
-  console.log('hai')
-  clearInterval(scrollInt)
-})
-$('.arrow2').on('click', function () {
-  galleryScroll();
-  console.log('hai')
-})
-  </script>
+<script src="app.js"></script>
 
 </html>
